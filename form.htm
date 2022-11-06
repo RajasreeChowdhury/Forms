@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+    <head> <title>form</title>
+    <style>
+        div{
+            border-radius:5px;
+            background-color:azure;
+            padding:20px;
+            margin:40px 300px;
+
+        }
+        input.a,select{
+            width:100%;
+            padding:12px 20px;
+            margin:8px 0;
+            display:inline-block;
+            border:1px solid rgb(190, 190, 190);
+            border-radius:4px;
+            box-sizing:border-box;
+        }
+        input.b{
+            width:30%;
+            background-color: rgb(127, 207, 7);
+            border-radius: 5px;
+            cursor: pointer;
+            padding:20px 5px;
+        }
+        
+         
+       
+    </style>
+    </head>
+    <body>
+        <h2 style="text-align:center;color:rgb(151, 63, 63);font-family:Georgia, 'Times New Roman', Times, serif"> Please fill out all the details </h2>
+        <div>
+        <form action="/action_page.php" novalidate target="_blank" method="post autocomplete="on">
+
+            <label for="fname">First Name</label><br>
+            <input class="a" type="text" id="fname" name="fname"><br> <br>
+            <label for="lname">Last Name</label><br>
+            <input class="a" type="text" id="lname" name="lname"> <br> <br>
+            <label for="mail">Email address </label><br>
+            <input class="a" type="email" id="mail" name="email"><br><br>
+            <label for="pass">Password </label><br>
+            <input class="a" type="password" id="pass" name="pass"><br><br>
+            <label for="Phno">Phone number </label><br>
+            <input class="a" type="tel" id="Phno" name="Phno" pattern="[7-9]{1}[0-9]{9}" required><br><br>
+            <label for="add1">Address Line 1</label><br>
+            <input class="a" type="text" id="add1" name="add1"><br><br>
+            <label for="add2">Address Line 2 </label><br>
+            <input class="a" type="text" id="add2" name="add2"><br><br>
+
+            <label for="city">City</label><br>
+            <select name="city" id="city" size="3" multiple>  <!to show visible value of any defined size use size attribute>
+                <option value="Kolkata"> Kolkata </option> <!by default, the first element in option is selected>
+                <option value="Bengaluru"> Bengaluru </option><! you can select more than one option using the multiple attribute>
+                <option value="Mumbai"> Mumbai </option>
+                <option value="Delhi"> Delhi </option>
+                <option value="Pune"> Pune </option>
+                <option value="Hyderabad"> Hyderabad </option>
+            </select> <br> <br>
+
+            <label for="state">State</label><br>
+            <select name="state" id="state"> <! to pre select option use the selected attribute>
+                <option value="West Bengal"> West Bengal </option>
+                <option value="Karnataka"> Karnataka </option>
+                <option value="Maharastra" selected> Maharastra </option>
+                <option value="Assam"> Assam </option>
+                <option value="Uttar Pradesh"> Uttar Pradesh </option>
+                <option value="Meghalaya"> Meghalaya </option>
+            </select>
+
+            <p>Passout batch</p>
+            <input type="radio" id="2022" name="batch" value="2022">
+            <label for="2022"> 2022 </label><br>
+            <input type="radio" id="2023" name="batch" value="2023">
+            <label for="2023"> 2023 </label><br>
+            <input type="radio" id="2024" name="batch" value="2024">
+            <label for="2024"> 2024 </label><br>
+
+            <p> Highest qualification </p>
+            <input type="checkbox" id="hq" name="a" value="Btech">
+            <label for="hq"> Btech </label><br>
+            <input type="checkbox" id="hq1" name="a" value="Mtech">
+            <label for="hq1"> Mtech </label><br>
+            <input type="checkbox" id="hq2" name="a" value="MBA">
+            <label for="hq2"> Mba </label><br><br>
+
+            <label for="passout">Enter passout Month & Year</label><br>
+            <input type="month" id="passout" name="passout"> <br><br>
+
+            <label for="back">Enter total backlogs </label><br>
+            <input type="number" id="back" name="back" min="0" max="6"> <br> <br>
+
+            <h3> Write your past experience within 200 words</h3>
+            <textarea name="past" style="width:500px ; height:300px" rows="10"> </textarea> <br> <br>
+            <label for="sal">Choose salary range: </label>
+            <input type="range" id="sal" name="sal" min="0" max="10" value="0"><br><br>
+
+            <fieldset>
+                <legend> Personal info </legend>
+                <label for="sex">Sex</label><br>
+                <input list="sex" name="sex">
+                <datalist id="sex">
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Prefer not to say">Prefer not to say</option>
+                </datalist> <br> <br>
+                <label for="dob"> Date of Birth </label><br>
+                <input type="date" id="dob" name="dob"> 
+            </fieldset>
+
+            <p> For backup reasons, please select your favourite colour <p>
+            <label for="color">Choose your favourite colour</label><br>
+            <input type="color"  id="color" name="color"><br>
+
+            <p> Please ensure the date and time for security reasons</p>
+            <label for="dtl">Enter Date and Time </label><br>
+            <input type="datetime-local" id="dtl" name="dtl"> <br> <br>
+
+            <label for="url">Linkedin url</label><br>
+            <input type="url" id="url" name="url"> <br> <br>
+
+            <label for="resume">Upload Resume</label><br>
+            <input type="file" id="resume" name="resume"> <br> <br>
+
+            <input type="image" src="submit.png" alt="submit" width="80px" height="80px"> <br>
+
+
+            <input class="b" type="submit" value="submit">
+
+            
+
+            
+            
+            
+            
+            
+
+            
+            </div>
+        </form>
+    </body>
+</html>
